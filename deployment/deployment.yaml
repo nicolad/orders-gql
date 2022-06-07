@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: stats-api
+  namespace: website
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: stats-api
+    spec:
+      containers:
+        - name: stats-api
+          image: asia.gcr.io/cloudnative-id/stats-api:0.1.0-test1
+          imagePullPolicy: Always
+          args:
+          env:
+          ports:
+            - name: http
+              containerPort: 8080
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256M"
+            limits:
+              cpu: "500m"
+              memory: "512M"

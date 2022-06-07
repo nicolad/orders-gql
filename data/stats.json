@@ -1,0 +1,292 @@
+{
+  "companies": [
+    {
+      "id": "cncf",
+      "name": "Cloud Native Computing Foundation (CNCF)",
+      "websiteURL": "https://www.cncf.io/",
+      "logoURL": "https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/stacked/color/cncf-stacked-color.png"
+    },
+    {
+      "id": "google",
+      "name": "Google Cloud",
+      "websiteURL": "https://cloud.google.com",
+      "logoURL": "https://cloud.google.com/_static/e4e95039f4/images/cloud/cloud-logo.svg"
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "websiteURL": "https://www.microsoft.com",
+      "logoURL": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+    },
+    {
+      "id": "aws",
+      "name": "AWS",
+      "websiteURL": "https://aws.amazon.com/id/",
+      "logoURL": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"
+    },
+    {
+      "id": "hpe",
+      "name": "HPE",
+      "websiteURL": "https://www.hpe.com/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hewlett_Packard_Enterprise_logo.svg/1373px-Hewlett_Packard_Enterprise_logo.svg.png"
+    },
+    {
+      "id": "gojek",
+      "name": "Gojek",
+      "websiteURL": "https://www.gojek.com/",
+      "logoURL": "https://lelogama.go-jek.com/service_icon_text/gojek-logo_normal.svg"
+    },
+    {
+      "id": "traveloka",
+      "name": "Traveloka",
+      "websiteURL": "https://www.traveloka.com/",
+      "logoURL": "https://tvlk-blog.imgix.net/2020/01/Traveloka_Primary_Logo.png"
+    },
+    {
+      "id": "linkaja",
+      "name": "LinkAja",
+      "websiteURL": "https://www.linkaja.id/",
+      "logoURL": "https://www.linkaja.id/assets/linkaja/img/brand/logo_header.svg"
+    },
+    {
+      "id": "ruangguru",
+      "name": "Ruangguru",
+      "websiteURL": "https://www.ruangguru.com/",
+      "logoURL": "https://bimbel.ruangguru.com/hubfs/logo%20RG/asset_ruangguru_arctic%20blue.svg"
+    },
+    {
+      "id": "kitabisa",
+      "name": "Kitabisa",
+      "websiteURL": "https://kitabisa.com/",
+      "logoURL": "https://kitabisa.com/static/images/logogram__ktbs_white.png"
+    },
+    {
+      "id": "kalibrr",
+      "name": "Kalibrr",
+      "websiteURL": "https://www.kalibrr.id/",
+      "logoURL": "https://rec-data.kalibrr.com/logos/7V8E5EX4UCSHF77AC54PUHBN4U5PFZYP43L73EVU-5b866c9b.png"
+    },
+    {
+      "id": "mamikos",
+      "name": "Mamikos",
+      "websiteURL": "https://mamikos.com/",
+      "logoURL": "https://mamikos.com/assets/logo/svg/logo_mamikos_green.svg"
+    },
+    {
+      "id": "kata",
+      "name": "Kata.ai",
+      "websiteURL": "https://kata.ai/",
+      "logoURL": "https://kata.ai/static/png/footer/logo.png"
+    },
+    {
+      "id": "nodeflux",
+      "name": "Nodeflux",
+      "websiteURL": "https://www.nodeflux.io/",
+      "logoURL": "https://d3g5ywftkpzr0e.cloudfront.net/wp-content/uploads/2019/04/15124237/nodeflux.png"
+    },
+    {
+      "id": "biznetgio",
+      "name": "Biznet GioCloud",
+      "websiteURL": "https://www.biznetgio.com/",
+      "logoURL": "https://www.biznetnetworks.com/assets/list-logo/logo-horizontal/biznet_giocloud_logopng.png"
+    },
+    {
+      "id": "cbncloud",
+      "name": "CBN Cloud",
+      "websiteURL": "https://www.cbncloud.co.id/",
+      "logoURL": "https://www.cbncloud.co.id/wp-content/uploads/2019/08/front-logo.png"
+    },
+    {
+      "id": "fdn",
+      "name": "Female Daily Network",
+      "websiteURL": "https://femaledaily.com/",
+      "logoURL": "https://urbanhire.s3-ap-southeast-1.amazonaws.com/careersite/d095870c574a7049726412aa09e99965-resize-png"
+    },
+    {
+      "id": "qiscus",
+      "name": "Qiscus",
+      "websiteURL": "https://www.qiscus.com/",
+      "logoURL": "https://www.qiscus.com/v3/images/logos/qiscus.svg"
+    },
+    {
+      "id": "hilotech",
+      "name": "Hilotech",
+      "websiteURL": "http://hilotech.co.id/",
+      "logoURL": "https://www.qiscus.com/v3/images/logos/qiscus.svg"
+    }
+  ],
+  "speakers": [
+    {
+      "id": "luxas",
+      "name": "Lucas Käldström",
+      "title": "CNCF Ambassador",
+      "email": "lucas@luxaslabs.com",
+      "company": "luxaslabs",
+      "github": "luxas",
+      "speakersBureau": "luxas"
+    },
+    {
+      "id": "redhat",
+      "name": "Red Hat",
+      "websiteURL": "https://www.redhat.com",
+      "logoURL": "https://videos.cdn.redhat.com/NEXT/new-brand/Logo-RedHat-A-Color-RGB.svg"
+    }
+  ],
+  "meetupGroups": [
+    {
+      "photo": "https://secure.meetupstatic.com/photos/event/d/9/3/highres_483783475.jpeg",
+      "name": "Cloud Native Aalborg",
+      "city": "Aalborg",
+      "country": "denmark",
+      "description": "\u003cp\u003eCloud Native Aalborg is a meetup having focus on Cloud Native technologies. Cloud Native technologies are graduated and incubating projects, such as: Kubernetes, Prometheus, Envoy, fluentd and e.g. OpenTracing, Jaeger, etc. to mention a few. \u003cbr\u003eTechnologies and practices around the platform of platforms will also be on the agenda for the meetup group. \u003cbr\u003eWe are a small group of people passionate about these technologies working together with the Cloud Native Nordics team in an effort to share experiences, and provide a platform for like-minded people to present and discuss these awesome technologies.\u003c/p\u003e\n\u003cp\u003eCloud Native Aalborg will apply for being an official Cloud Native Computing Foundation meetup group, and part of the Cloud Native Nordics community as well.\u003c/p\u003e\n\u003cp\u003eYou can join the Cloud Native Nordics Slack Community for further discussions: \u003ca href=\"https://www.cloudnativenordics.com\" class=\"linkified\"\u003ehttps://www.cloudnativenordics.com\u003c/a\u003e and to share your thoughts and ideas with other people sharing the passion for this.\u003c/p\u003e",
+      "sponsorTiers": {
+        "cncf": "SpeakerProvider",
+        "redhat": "Meetup"
+      },
+      "meetupID": "Cloud-Native-Aalborg",
+      "organizers": [
+        "allanhojgaardjensen",
+        "arnemejlholm",
+        "simonbengtsson",
+        "camillalarsen"
+      ],
+      "cfpLink": "",
+      "latitude": 57.055465,
+      "longitude": 9.917825,
+      "ecosystemMembers": null,
+      "meetups": {
+        "20190904": {
+          "id": 263744803,
+          "photo": "https://secure.meetupstatic.com/photos/event/3/0/b/4/highres_483972468.jpeg",
+          "name": "#1 - Initial Meetup in Cloud Native Aalborg",
+          "date": "2019-09-04T17:00:00Z",
+          "duration": "3h0m0s",
+          "attendees": 54,
+          "address": "Skelagervej 15",
+          "recording": "",
+          "sponsors": [
+            {
+              "role": "Venue",
+              "company": "redhat"
+            }
+          ],
+          "presentations": [
+            {
+              "duration": "15m0s",
+              "title": "Welcome from Sparnord",
+              "slides": "https://github.com/Cloud-Native-Aalborg/media/blob/master/slides/CloudNative-Aalborg-1.pdf",
+              "speakers": [
+                "luxas"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "photo": "https://secure.meetupstatic.com/photos/event/5/d/b/8/highres_483803992.jpeg",
+      "name": "Cloud Native Copenhagen",
+      "city": "Copenhagen",
+      "country": "denmark",
+      "description": "\u003cp\u003eCloud Native Copenhagen is a new meet-up group focusing on the Cloud Native stack. This means projects such as Kubernetes, Prometheus, OpenTracing, gRPC, fluentd... We are a small group of people passionate about these technologies that would like to share our experiences, and provide a platform for like-minded people to present and discuss these awesome technologies.\u003c/p\u003e",
+      "sponsorTiers": {
+        "cncf": "SpeakerProvider",
+        "falconio": "Meetup",
+        "humio": "SpeakerProvider",
+        "jfrog": "SpeakerProvider",
+        "laszlocloud": "Meetup",
+        "loodse": "SpeakerProvider",
+        "microsoft": "SpeakerProvider",
+        "praqma": "Meetup",
+        "republikken": "Meetup",
+        "simcorp": "Meetup",
+        "trifork": "Meetup",
+        "twentythree": "Meetup",
+        "unity": "Meetup",
+        "whyyy": "Meetup"
+      },
+      "meetupID": "Cloud-Native-Copenhagen",
+      "organizers": [
+        "laszlo",
+        "jasmine",
+        "jeppe",
+        "hans"
+      ],
+      "cfpLink": "",
+      "latitude": 55.676111,
+      "longitude": 12.568333,
+      "ecosystemMembers": null,
+      "meetups": {
+        "20171212": {
+          "id": 245248552,
+          "name": "Let's kick-off Cloud Native Copenhagen!",
+          "date": "2017-12-12T17:00:00Z",
+          "duration": "3h0m0s",
+          "attendees": 27,
+          "address": "Sortedam Dossering 5D",
+          "recording": "",
+          "sponsors": [
+            {
+              "role": "Venue",
+              "company": "twentythree"
+            }
+          ],
+          "presentations": [
+            {
+              "duration": "20m0s",
+              "title": "Doors open",
+              "slides": "",
+              "speakers": null
+            },
+            {
+              "duration": "10m0s",
+              "title": "Welcome from Cloud Native Copenhagen",
+              "slides": "",
+              "speakers": null
+            },
+            {
+              "duration": "10m0s",
+              "title": "Welcome from TwentyThree",
+              "slides": "",
+              "speakers": null
+            },
+            {
+              "duration": "30m0s",
+              "title": "What is Cloud Native?",
+              "slides": "https://github.com/cloud-native-nordics/meetups/blob/add-copenhagen-meetups/copenhagen/2017/cloud-native-copenhagen-1/What-is-Cloud-Native.pdf",
+              "speakers": [
+                "laszlo"
+              ]
+            },
+            {
+              "duration": "30m0s",
+              "title": "Food break - group discussions",
+              "slides": "",
+              "speakers": null
+            },
+            {
+              "duration": "30m0s",
+              "title": "Jenkins as Code",
+              "slides": "https://github.com/cloud-native-nordics/meetups/blob/add-copenhagen-meetups/copenhagen/2017/cloud-native-copenhagen-1/JenkinsAsCode.pdf",
+              "speakers": [
+                "ewelina"
+              ]
+            },
+            {
+              "duration": "50m0s",
+              "title": "Group discussions - continued",
+              "slides": "",
+              "speakers": null
+            },
+            {
+              "duration": "0s",
+              "title": "Gates close",
+              "slides": "",
+              "speakers": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
