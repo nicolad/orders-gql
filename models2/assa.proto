@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package models.v1;
+
+option go_package = "github.com/jankrynauw/assa";
+
+// A service to manage creating, reading, updating and deleting models
+service Members {
+  // Creates a new Member resource
+  rpc CreateMember (CreateMemberRequest) returns (Company) {}
+  // Get a Member resource
+  rpc GetMember (GetMemberRequest) returns (Company) {}
+}
+
+// Message defining a Member resource
+message Company {  
+  string id = 1;  
+  string name = 2;
+}
+
+// Request message for [assa.v1.Members.CreateMember]
+message CreateMemberRequest {
+  // The Member to create
+  Company member = 1;
+}
+
+// Request message for [assa.v1.Members.GetMember]
+message GetMemberRequest {
+  // The name of the Member to retrieve
+  // Format: members/{member}
+  string name = 1;
+}
