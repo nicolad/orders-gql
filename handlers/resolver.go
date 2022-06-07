@@ -3,9 +3,9 @@ package handlers
 import (
 	"context"
 
-	"github.com/cloud-native-nordics/stats-api/generated"
-	"github.com/cloud-native-nordics/stats-api/models"
-	"github.com/cloud-native-nordics/stats-api/repositories"
+	"github.com/nicolad/orders-gql/generated"
+	"github.com/nicolad/orders-gql/models"
+	"github.com/nicolad/orders-gql/repositories"
 	"github.com/golang/glog"
 )
 

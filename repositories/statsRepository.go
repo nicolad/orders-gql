@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"github.com/cloud-native-nordics/stats-api/models"
+	"github.com/nicolad/orders-gql/models"
 	"github.com/hashicorp/go-memdb"
 )
 

@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/99designs/gqlgen/handler"
-	"github.com/cloud-native-nordics/stats-api/generated"
-	"github.com/cloud-native-nordics/stats-api/handlers"
-	"github.com/cloud-native-nordics/stats-api/repositories"
+	"github.com/nicolad/orders-gql/generated"
+	"github.com/nicolad/orders-gql/handlers"
+	"github.com/nicolad/orders-gql/repositories"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/golang/glog"
