@@ -6,12 +6,12 @@ import (
 	"time"
 
 	"github.com/99designs/gqlgen/handler"
-	"github.com/nicolad/orders-gql/generated"
-	"github.com/nicolad/orders-gql/handlers"
-	"github.com/nicolad/orders-gql/repositories"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/golang/glog"
+	"github.com/nicolad/orders-gql/generated"
+	"github.com/nicolad/orders-gql/handlers"
+	"github.com/nicolad/orders-gql/repositories"
 	"github.com/rs/cors"
 	flag "github.com/spf13/pflag"
 )
