@@ -4,7 +4,7 @@
 # for detailed .gqlgen.yml documentation.
 
 schema:
-- schema.graphql
+  - schema.graphql
 exec:
   filename: ../generated/generated.go
   package: generated
@@ -19,7 +19,7 @@ models:
   MeetupGroup:
     model: github.com/nicolad/orders-gql/models.MeetupGroup
   Organizer:
-    model: github.com/nicolad/orders-gql/models.Organizer  
+    model: github.com/nicolad/orders-gql/models.Organizer
   Meetup:
     model: github.com/nicolad/orders-gql/models.Meetup
   Sponsor:

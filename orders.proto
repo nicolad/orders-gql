@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package models.v1;
+
+option go_package = "https://github.com/nicolad/orders-gql;models";
+
+service Orders {  
+  rpc CreateOrder (CreateOrderRequest) returns (Order) {}  
+  rpc GetOrder (GetOrderRequest) returns (Order) {}
+}
+
+message Order {
+  string ID = 1;  
+  string name = 2;
+  string websiteURL = 3;
+  string logoURL = 4;
+  bool whiteLogo = 5;
+}
+
+message CreateOrderRequest {  
+  Order order = 1;
+}
+
+message GetOrderRequest {  
+  string name = 1;
+}
