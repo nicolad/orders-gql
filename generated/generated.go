@@ -140,14 +140,9 @@ type ComplexityRoot struct {
 }
 
 type CompanyResolver interface {
-	ID(ctx context.Context, obj *models.Company) (string, error)
-	Name(ctx context.Context, obj *models.Company) (*string, error)
-	WebsiteURL(ctx context.Context, obj *models.Company) (*string, error)
-	LogoURL(ctx context.Context, obj *models.Company) (*string, error)
 	Countries(ctx context.Context, obj *models.Company) ([]*string, error)
 	SponsorTiers(ctx context.Context, obj *models.Company) ([]*models.SponsorTier, error)
 	Speakers(ctx context.Context, obj *models.Company) ([]*models.Speaker, error)
-	WhiteLogo(ctx context.Context, obj *models.Company) (*bool, error)
 }
 type MeetupResolver interface {
 	Sponsors(ctx context.Context, obj *models.Meetup) ([]*models.Sponsor, error)
@@ -744,103 +739,103 @@ func (ec *executionContext) introspectType(name string) (*introspection.Type, er
 
 var parsedSchema = gqlparser.MustLoadSchema(
 	&ast.Source{Name: "schema.graphql", Input: `schema {
-    query: Query
+  query: Query
 }
 
 type MeetupGroup {
-    photo: String
-    name: String
-    city: String!
-    country: String!
-    description: String!
-    memberCount: Int!
-    sponsorTiers: [SponsorTier!]!
-    meetupID: String!
-    organizers: [Speaker!]!
-    cfpLink: String
-    latitude: Float
-    longitude: Float
-    ecosystemMembers: [Company!]!
-    meetups: [Meetup!]!
+  photo: String
+  name: String
+  city: String!
+  country: String!
+  description: String!
+  memberCount: Int!
+  sponsorTiers: [SponsorTier!]!
+  meetupID: String!
+  organizers: [Speaker!]!
+  cfpLink: String
+  latitude: Float
+  longitude: Float
+  ecosystemMembers: [Company!]!
+  meetups: [Meetup!]!
 }
 
 type Speaker {
-    id: String!
-    name: String
-    title: String
-    email: String
-    company: Company
-    github: String
-    speakersBureau: String
-    countries: [String]!
-    presentations: [Presentation!]!
+  id: String!
+  name: String
+  title: String
+  email: String
+  company: Company
+  github: String
+  speakersBureau: String
+  countries: [String]!
+  presentations: [Presentation!]!
 }
 
-
 type Company {
-    id: String!
-    name: String
-    websiteURL: String
-    logoURL: String
-    countries: [String]!
-    sponsorTiers: [SponsorTier!]!
-    speakers: [Speaker!]!
-    whiteLogo: Boolean
+  id: String!
+  name: String
+  websiteURL: String
+  logoURL: String
+  countries: [String]!
+  sponsorTiers: [SponsorTier!]!
+  speakers: [Speaker!]!
+  whiteLogo: Boolean
 }
 
 type Meetup {
-    id: Int!
-    name: String
-    date: String
-    duration: String
-    attendees: Int
-    address: String
-    photo: String
-    recording: String
-    sponsors: [Sponsor]!
-    presentations: [Presentation]
-    meetupGroup: MeetupGroup!
+  id: Int!
+  name: String
+  date: String
+  duration: String
+  attendees: Int
+  address: String
+  photo: String
+  recording: String
+  sponsors: [Sponsor]!
+  presentations: [Presentation]
+  meetupGroup: MeetupGroup!
 }
 
 type Sponsor {
-    role: String!
-    company: Company!
+  role: String!
+  company: Company!
 }
 
 type SponsorTier {
-    id: String!
-    tier: String!
-    company: Company!
-    meetupGroups: [MeetupGroup!]!
+  id: String!
+  tier: String!
+  company: Company!
+  meetupGroups: [MeetupGroup!]!
 }
 
 type Presentation {
-    id: String!
-    duration: String
-    title: String
-    slides: String
-    speakers: [Speaker]
-    meetup: Meetup!
+  id: String!
+  duration: String
+  title: String
+  slides: String
+  speakers: [Speaker]
+  meetup: Meetup!
 }
 
 type Query {
-    meetupGroups: [MeetupGroup!]!
-    meetupGroup(meetupID: String!): MeetupGroup!
+  meetupGroups: [MeetupGroup!]!
+  meetupGroup(meetupID: String!): MeetupGroup!
 
-    companies: [Company!]!
-    company(id: String!): Company!
+  companies: [Company!]!
+  company(id: String!): Company!
 
-    meetups: [Meetup!]!
-    meetup(id: Int!): Meetup!
+  meetups: [Meetup!]!
+  meetup(id: Int!): Meetup!
 
-    presentations: [Presentation!]!
-    presentation(id: String!): Presentation!
+  presentations: [Presentation!]!
+  presentation(id: String!): Presentation!
 
-    speakers: [Speaker!]!
-    speaker(id: String!): Speaker!
+  speakers: [Speaker!]!
+  speaker(id: String!): Speaker!
 
-    slackInvite(email: String!): String!
-}`},
+  slackInvite(email: String!): String!
+}
+`},
 )
 
 // endregion ************************** generated!.gotpl **************************
@@ -994,13 +989,13 @@ func (ec *executionContext) _Company_id(ctx context.Context, field graphql.Colle
 		Object:   "Company",
 		Field:    field,
 		Args:     nil,
-		IsMethod: true,
+		IsMethod: false,
 	}
 	ctx = graphql.WithResolverContext(ctx, rctx)
 	ctx = ec.Tracer.StartFieldResolverExecution(ctx, rctx)
 	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
 		ctx = rctx // use context from middleware stack in children
-		return ec.resolvers.Company().ID(rctx, obj)
+		return obj.ID, nil
 	})
 	if err != nil {
 		ec.Error(ctx, err)
@@ -1031,13 +1026,13 @@ func (ec *executionContext) _Company_name(ctx context.Context, field graphql.Col
 		Object:   "Company",
 		Field:    field,
 		Args:     nil,
-		IsMethod: true,
+		IsMethod: false,
 	}
 	ctx = graphql.WithResolverContext(ctx, rctx)
 	ctx = ec.Tracer.StartFieldResolverExecution(ctx, rctx)
 	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
 		ctx = rctx // use context from middleware stack in children
-		return ec.resolvers.Company().Name(rctx, obj)
+		return obj.Name, nil
 	})
 	if err != nil {
 		ec.Error(ctx, err)
@@ -1046,10 +1041,10 @@ func (ec *executionContext) _Company_name(ctx context.Context, field graphql.Col
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(*string)
+	res := resTmp.(string)
 	rctx.Result = res
 	ctx = ec.Tracer.StartFieldChildExecution(ctx)
-	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+	return ec.marshalOString2string(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Company_websiteURL(ctx context.Context, field graphql.CollectedField, obj *models.Company) (ret graphql.Marshaler) {
@@ -1065,13 +1060,13 @@ func (ec *executionContext) _Company_websiteURL(ctx context.Context, field graph
 		Object:   "Company",
 		Field:    field,
 		Args:     nil,
-		IsMethod: true,
+		IsMethod: false,
 	}
 	ctx = graphql.WithResolverContext(ctx, rctx)
 	ctx = ec.Tracer.StartFieldResolverExecution(ctx, rctx)
 	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
 		ctx = rctx // use context from middleware stack in children
-		return ec.resolvers.Company().WebsiteURL(rctx, obj)
+		return obj.WebsiteURL, nil
 	})
 	if err != nil {
 		ec.Error(ctx, err)
@@ -1080,10 +1075,10 @@ func (ec *executionContext) _Company_websiteURL(ctx context.Context, field graph
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(*string)
+	res := resTmp.(string)
 	rctx.Result = res
 	ctx = ec.Tracer.StartFieldChildExecution(ctx)
-	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+	return ec.marshalOString2string(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Company_logoURL(ctx context.Context, field graphql.CollectedField, obj *models.Company) (ret graphql.Marshaler) {
@@ -1099,13 +1094,13 @@ func (ec *executionContext) _Company_logoURL(ctx context.Context, field graphql.
 		Object:   "Company",
 		Field:    field,
 		Args:     nil,
-		IsMethod: true,
+		IsMethod: false,
 	}
 	ctx = graphql.WithResolverContext(ctx, rctx)
 	ctx = ec.Tracer.StartFieldResolverExecution(ctx, rctx)
 	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
 		ctx = rctx // use context from middleware stack in children
-		return ec.resolvers.Company().LogoURL(rctx, obj)
+		return obj.LogoURL, nil
 	})
 	if err != nil {
 		ec.Error(ctx, err)
@@ -1114,10 +1109,10 @@ func (ec *executionContext) _Company_logoURL(ctx context.Context, field graphql.
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(*string)
+	res := resTmp.(string)
 	rctx.Result = res
 	ctx = ec.Tracer.StartFieldChildExecution(ctx)
-	return ec.marshalOString2ᚖstring(ctx, field.Selections, res)
+	return ec.marshalOString2string(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Company_countries(ctx context.Context, field graphql.CollectedField, obj *models.Company) (ret graphql.Marshaler) {
@@ -1244,13 +1239,13 @@ func (ec *executionContext) _Company_whiteLogo(ctx context.Context, field graphq
 		Object:   "Company",
 		Field:    field,
 		Args:     nil,
-		IsMethod: true,
+		IsMethod: false,
 	}
 	ctx = graphql.WithResolverContext(ctx, rctx)
 	ctx = ec.Tracer.StartFieldResolverExecution(ctx, rctx)
 	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
 		ctx = rctx // use context from middleware stack in children
-		return ec.resolvers.Company().WhiteLogo(rctx, obj)
+		return obj.WhiteLogo, nil
 	})
 	if err != nil {
 		ec.Error(ctx, err)
@@ -1259,10 +1254,10 @@ func (ec *executionContext) _Company_whiteLogo(ctx context.Context, field graphq
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(*bool)
+	res := resTmp.(bool)
 	rctx.Result = res
 	ctx = ec.Tracer.StartFieldChildExecution(ctx)
-	return ec.marshalOBoolean2ᚖbool(ctx, field.Selections, res)
+	return ec.marshalOBoolean2bool(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Meetup_id(ctx context.Context, field graphql.CollectedField, obj *models.Meetup) (ret graphql.Marshaler) {
@@ -4593,52 +4588,16 @@ func (ec *executionContext) _Company(ctx context.Context, sel ast.SelectionSet, 
 		case "__typename":
 			out.Values[i] = graphql.MarshalString("Company")
 		case "id":
-			field := field
-			out.Concurrently(i, func() (res graphql.Marshaler) {
-				defer func() {
-					if r := recover(); r != nil {
-						ec.Error(ctx, ec.Recover(ctx, r))
-					}
-				}()
-				res = ec._Company_id(ctx, field, obj)
-				if res == graphql.Null {
-					atomic.AddUint32(&invalids, 1)
-				}
-				return res
-			})
+			out.Values[i] = ec._Company_id(ctx, field, obj)
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&invalids, 1)
+			}
 		case "name":
-			field := field
-			out.Concurrently(i, func() (res graphql.Marshaler) {
-				defer func() {
-					if r := recover(); r != nil {
-						ec.Error(ctx, ec.Recover(ctx, r))
-					}
-				}()
-				res = ec._Company_name(ctx, field, obj)
-				return res
-			})
+			out.Values[i] = ec._Company_name(ctx, field, obj)
 		case "websiteURL":
-			field := field
-			out.Concurrently(i, func() (res graphql.Marshaler) {
-				defer func() {
-					if r := recover(); r != nil {
-						ec.Error(ctx, ec.Recover(ctx, r))
-					}
-				}()
-				res = ec._Company_websiteURL(ctx, field, obj)
-				return res
-			})
+			out.Values[i] = ec._Company_websiteURL(ctx, field, obj)
 		case "logoURL":
-			field := field
-			out.Concurrently(i, func() (res graphql.Marshaler) {
-				defer func() {
-					if r := recover(); r != nil {
-						ec.Error(ctx, ec.Recover(ctx, r))
-					}
-				}()
-				res = ec._Company_logoURL(ctx, field, obj)
-				return res
-			})
+			out.Values[i] = ec._Company_logoURL(ctx, field, obj)
 		case "countries":
 			field := field
 			out.Concurrently(i, func() (res graphql.Marshaler) {
@@ -4682,16 +4641,7 @@ func (ec *executionContext) _Company(ctx context.Context, sel ast.SelectionSet, 
 				return res
 			})
 		case "whiteLogo":
-			field := field
-			out.Concurrently(i, func() (res graphql.Marshaler) {
-				defer func() {
-					if r := recover(); r != nil {
-						ec.Error(ctx, ec.Recover(ctx, r))
-					}
-				}()
-				res = ec._Company_whiteLogo(ctx, field, obj)
-				return res
-			})
+			out.Values[i] = ec._Company_whiteLogo(ctx, field, obj)
 		default:
 			panic("unknown field " + strconv.Quote(field.Name))
 		}
